@@ -17,6 +17,10 @@
     <h1><b>Кино.бай</b></h1>
 
     <p>Кино на любов вкус</p>
+    <form action="https://google.by" method="get">
+        <input type="search" placeholder="Поиск" name="finder" />
+        <input type="submit" value="Искать">
+    </form>
     <nav>
         <ul role="menubar" style=list-style-type:none>
             <li><a href="#">Афиша</a></li>
@@ -92,7 +96,33 @@
                 </tr>
                 </tbody>
             </table>
+            <hr />
         </footer>
+        <section>
+            <br />
+            <form action="https://yakimco.github.io" method="post">
+                <label for="name-surname">Имя Фамилия:</label>
+                <input type="text" name="surname" id="name-surname" required/><br />
+                <label>Почта:<input type="email" name="mail" required/></label><br />
+
+                <details open="open">
+                    <summary>Дополнительная информация</summary>
+
+                    <fieldset>
+                        <legend>Пол</legend>
+                        <label for="male">Мужской</label><input type="radio" name="sex" id="male"/>
+                        <label>Женский<input type="radio" name="sex" /></label>
+                    </fieldset>
+                    <input type="checkbox" id="shitbrowser" name="amigo" checked /><label for="shitbrowser">Установить браузер Амиго на ваш компьютер</label><br />
+                </details>
+                <input type="checkbox" id="recommend" name="recommendation" />
+                <label for="recommend">Буду рекомендовать фильм</label><br />
+                <textarea rows="5" cols="55" name="cooment-section">
+            </textarea><br />
+                <input type="submit" value="Добавить комментарий" />
+
+            </form>
+        </section>
     </article>
 </main>
 
