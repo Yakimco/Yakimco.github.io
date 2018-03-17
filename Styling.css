@@ -10,8 +10,8 @@ body{
 }
 .header-kino {
     background-color: #585858;
-    padding: 10px;
-    border: 1px solid transparent;
+    padding: 1em;
+    padding-top: .1em;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
 }
@@ -20,7 +20,7 @@ body{
     color:#ffffff;
 }
 nav {
-    border: 1px solid transparent;
+    border: .01em solid transparent;
     background-color: #525252;
 }
 nav li{
@@ -48,7 +48,7 @@ nav li{
 }
 
 .article-header{
-    border-left: 5px solid #ff6600;
+    border-left: .5em solid #ff6600;
     padding: .5em;
     background: linear-gradient(#f2f2f2, #e1e1e1);
 }
@@ -59,11 +59,12 @@ nav li{
 .footer-container {
     background-color: #585858;
     padding: .5em;
-    border: 1px solid transparent;
+    border: .1em solid transparent;
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
     color: #fff;
     font-size .6em;
+    margin-top: 1em;
 }
 .footer-container a{
     text-decoration-line: underline;
