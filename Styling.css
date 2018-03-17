@@ -67,8 +67,8 @@ nav li{
     border: .1em solid transparent;
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
+    font-size: .9em;
     color: #fff;
-    font-size: .6em;
     margin-top: 1em;
 }
 
