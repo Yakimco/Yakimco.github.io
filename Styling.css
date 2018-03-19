@@ -12,34 +12,67 @@ body {
 
 /*header*/
 .header-kino {
+    width: auto;
     background-color: #585858;
     padding: 1em;
-    padding-top: .1em;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .header-kino h1 {
     font-size: 2em;
     color: #ffffff;
 }
+/*search size*/
+form input, form button {
+    padding: .5em .7em;
 
+}
+form button{
+    position: relative;
+    right: 01em;
+}
+
+/*navigation-menu*/
 nav {
     border: .01em solid transparent;
     background-color: #525252;
 }
 
 nav li {
+    display:inline-flex;
+    margin: 0 3em;
     text-decoration: none;
     list-style-type: none;
     color: white;
+    justify-items: center;
+    justify-content: space-between;
+    position: relative;
+    left: 4em;
 }
-/*content style*/
+/*content*/
+
+.columns {
+display: flex;
+    justify-content: space-between;
+}
+
 .search-result {
     background-color: #ffffff;
     margin-top: 1em;
     margin-bottom: 1em;
     box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
+    width: 74%;
+}
+.aside-info {
+    background: #ffffff;
+    box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
+    width:25%;
+    margin:1em 0;
 }
 
 .search-result-lord {
@@ -57,13 +90,28 @@ nav li {
     border-left: .5em solid #ff6600;
     padding: .5em;
     background: linear-gradient(#f2f2f2, #e1e1e1);
+    color:#ff6600;
 }
 
-.aside-info {
-    background: #ffffff;
-    box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
+/*movie description flex*/
+.flex-kino {
+    display: flex;
+}
+img {
+    width: 20em;
+}
+figcaption, main aside{
+    text-align: center;
+}
+article h1, aside h1 {
+    font-size: 1.3em;
+    font-weight: normal;
 }
 
+aside p, aside h1, main p, main h1{
+    padding:0 1em;
+}
+/*footer*/
 .footer-container {
     background-color: #585858;
     padding: .5em;
@@ -71,13 +119,13 @@ nav li {
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
     color: #fff;
-    margin-top: 1em;
 }
+/*small triangle*/
 span a:after {
     content: "";
     width: 0;
     height: 0;
-    border-bottom: .8em solid white;
+    border-bottom: .8em solid currentColor;
     border-left: .4em solid transparent;
     border-right: .4em solid transparent;
     display: inline-block;
@@ -88,36 +136,17 @@ span a:before{
     width: 0;
     height: 0;
     display: inline-block;
-    border:.3em solid white;
+    border:.3em solid currentColor;
     border-left: .3em solid transparent;
     border-radius: .3em;
 }
 
-.content {
-    padding-top: .1em;
-    padding-left: 2em;
-    padding-bottom: 1em;
+a:hover {
+    color:#d2ff40;
 }
 
 a, mark {
     color: inherit;
     text-decoration: none;
     background: transparent;
-}
-
-a:hover, span a:hover:before, span a:hover:after {/*почему не подсвечивает пакмэна??????*/
-    color: #d2ff40;
-}
-
-h1 {
-    color: #ff6600;
-}
-
-img {
-    width: 20em;
-}
-
-article h1, aside h1 {
-    font-size: 1.3em;
-    font-weight: normal;
 }
