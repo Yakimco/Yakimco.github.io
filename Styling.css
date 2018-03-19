@@ -130,7 +130,7 @@ span a:after {
     border-right: .4em solid transparent;
     display: inline-block;
 }
-/*Small yellow rotated Packman*/
+/*Small yellow rotated Packman 3 lines */
 span a:before{
     content: "";
     width: 0;
