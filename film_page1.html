@@ -2,134 +2,133 @@
 <head>
     <meta charset="UTF-8">
     <title>Кино.бай Властелин колец Возвращение короля</title>
-    <base href ="https://Yakimco.github.io/index.html">
+    <base href="https://Yakimco.github.io/index.html">
+    <link rel="Stylesheet" href="Styling.css">
+    <link rel="Stylesheet" href="libs/css/font-awesome.min.css">
 </head>
-<body>
+
 <header>
-    <p>
-        <strong>Внимание!</strong>
-        Этот сайт не использует технологии
-        <abbr title="Cascading Style Sheets ">CSS</abbr>
-        и JavaScript, он создан только при помощи
-        <abbr title="HyperText Markup Language">HTML</abbr>
-    </p>
-    <p><a name="top page"></a></p>
-    <h1><b>Кино.бай</b></h1>
-
-    <p>Кино на любов вкус</p>
-    <form action="https://google.by" method="get">
-        <input type="search" placeholder="Поиск" name="finder" />
-        <input type="submit" value="Искать"/>
-
-    </form>
-    <nav>
-        <ul role="menubar" style=list-style-type:none;>
-            <li><a href="#">Афиша</a></li>
-            <li><a href="#">Фильмы</a></li>
-            <li><a href="#">Рейтинги</a></li>
-            <li><a href="#">Журнал</a></li>
-            <li><a href="#">Оскар 2018</a></li>
-        </ul>
-    </nav>
-    <blockquote>
-        <p>
-            Бедствием любого кино были ненужные надписи,<br />
-            бедствием нынешнего - ненужные диалоги.<br />
-            <cite>Рене Клер</cite>
-        </p>
-    </blockquote>
+    <div class="header-kino">
+        <h1>Кино.бай</h1>
+        <form action="https://google.by" method="get" role="search">
+            <input type="search" placeholder="Поиск" name="finder"/>
+            <button type="submit" value="Искать" id="search"><span class="fa fa-search" aria-hidden="true"></span>
+            </button>
+        </form>
+    </div>
+    <div class="nav-container">
+        <nav>
+            <ul role="menubar" class="menu">
+                <li><a href="#">Афиша</a></li>
+                <li><a href="#">Фильмы</a></li>
+                <li><a href="#">Рейтинги</a></li>
+                <li><a href="#">Журнал</a></li>
+                <li><a href="#">Оскар 2018</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-<main>
-<article>
-    <header>
-        <h1>
-            Властелин колец Возвращение Короля
-        </h1>
-    </header>
-    <!-- Не забыть загнать файлы в папки-->
-    <figure>
-        <img src="images/img1.jpg" alt="Властелин колец возвращение короля">
-        <figcaption>Обложка фильма</figcaption>
-    </figure>
-    <section>
-        <p>
-        <h1>Описание</h1>
-        Последняя часть трилогиии о Кольце всевластия и героях,
-        взявших на себя бремя спасения Средиземья. Повелитель сил<br />
-        Тьмы Саурон направляет свои бесчисленные рати под Минас-Тирита,
-        крепости последней надежды.
-        <br />
+<div class="search-result">
+    <main>
+        <article>
+            <div class="columns">
+                <div class="search-result">
+                    <div class="article-header">
+                        <header>
+                            <h1>
+                                Властелин колец Возвращение Короля
+                            </h1>
+                        </header>
+                    </div>
+                    <div class="flex-kino">
+                        <div class="figure">
+                            <figure>
+                                <img src="images/img1.jpg" alt="Властелин колец возвращение короля">
+                                <figcaption>Обложка фильма</figcaption>
+                            </figure>
+                        </div>
+                        <div class="movie-description">
+                            <section>
 
-        <h1>Актеры</h1>
+                                <h1>Описание</h1>
+                                <p>
+                                    Последняя часть трилогиии о Кольце всевластия и героях,
+                                    взявших на себя бремя спасения Средиземья. Повелитель сил
+                                    Тьмы Саурон направляет свои бесчисленные рати под Минас-Тирита,
+                                    крепости последней надежды.
+                                </p>
 
-        <br />
-            Элайджа Вуд, Вигго Мартенсен, Шон Эстин, Иэн Маккелен, Орландо Блум,
-            Доминик Монахэн, Билли Бойд, Энди <br />
-            Серкис, Миранда Отто, Бернард Хилл
+                                <h1>Актеры</h1>
 
-        <!-- Не забыть загнать файлы в папки-->
-        <h1>Трейлер фильма</h1>
-        <video width="480" height="420" controls>
-            <source src="videos/trailer.mp4">
-        </video>
-    </section>
+                                <p>
+                                    Элайджа Вуд, Вигго Мартенсен, Шон Эстин, Иэн Маккелен, Орландо Блум,
+                                    Доминик Монахэн, Билли Бойд, Энди
+                                    Серкис, Миранда Отто, Бернард Хилл
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                    <section>
+                        <div class="trailer"><h1>Трейлер фильма</h1></div>
+                        <video controls>
+                            <source src="videos/trailer.mp4">
+                        </video>
 
-    <footer>
-            <table border="1">
-                <caption>Информация</caption>
+                </div>
+                </section>
+            </div>
+
+            <footer>
+                <table border="1">
                     <thead>
-                        <tr>
-                            <th>Год</th>
-                            <th>Оценка IMDb</th>
-                            <th>Бюджет</th>
-                            <th>Страна</th>
-                        </tr>
+                    <tr>
+                        <th>Год</th>
+                        <th>Оценка IMDb</th>
+                        <th>Бюджет</th>
+                        <th>Страна</th>
+                    </tr>
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td><time datetime="2003-12-23">2003</time> </td>
-                            <td>8,9<small>(1 349 172 )</small></td>
-                            <td>$94 000 000</td>
-                            <td>США</td>
-                        </tr>
+                    <tr>
+                        <td>
+                            <time datetime="2003-12-23">2003</time>
+                        </td>
+                        <td>8,9
+                            <small>(1 349 172 )</small>
+                        </td>
+                        <td>$94 000 000</td>
+                        <td>США</td>
+                    </tr>
                     </tbody>
-            </table>
-        <hr />
-    </footer>
-    <section>
-        <br />
-        <form action="https://yakimco.github.io" method="post">
-            <label for="name-surname">Имя Фамилия:</label>
-            <input type="text" name="surname" id="name-surname" required/><br />
-            <label>Почта:<input type="email" name="mail" required/></label><br />
+                </table>
+                <hr/>
+            </footer>
+            <section>
+                <br/>
+                <form action="https://yakimco.github.io" method="post">
+                    <label for="name-surname">Имя<span>*</span></label>
+                    <input type="text" name="surname" id="name-surname" required/><br/>
+                    <label for="mailbox">Почта<span>*</span><input type="email" id="mailbox" name="mail" required/></label><br/>
+    <label for="comment"> Комментарий<span>*</span></label>
+                    <textarea rows="15" cols="55" id="comment" name="comment-section" required>
+            </textarea><br/>
+                    <input type="submit" value="Добавить комментарий"/>
 
-           <details open="open">
-               <summary>Дополнительная информация</summary>
-
-            <fieldset>
-                <legend>Пол</legend>
-                <label for="male">Мужской</label><input type="radio" name="sex" id="male"/>
-                <label>Женский<input type="radio" name="sex" /></label>
-            </fieldset>
-               <input type="checkbox" id="shitbrowser" name="amigo" checked /><label for="shitbrowser">Установить браузер Амиго на ваш компьютер</label><br />
-            </details>
-            <input type="checkbox" id="recommend" name="recommendation" />
-            <label for="recommend">Буду рекомендовать фильм</label><br />
-            <textarea rows="5" cols="55" name="cooment-section">
-            </textarea><br />
-            <input type="submit" value="Добавить комментарий" />
-
-        </form>
-    </section>
-</article>
-</main>
-
-<footer>
-    <p>
-        <address>За какой-либо информацией обращайтесь по адресу <strong><a href ="mailto:yakimgrodno@gmail.com">yakimgrodno@gmail.com</a> </strong> </address> <br /><br />
+                </form>
+                <br/>
+            </section>
+        </article>
+    </main>
+</div>
+<div class="footer-container">
+    <footer>
+        <span><a href="#top">Наверх страницы</a></span><br/>
+        <address>За какой-либо информацией обращайтесь по адресу <strong><a href="mailto:yakimgrodno@gmail.com">yakimgrodno@gmail.com</a>
+        </strong></address>
+        <br/>
         <small> &#169 2018, Кино.бай</small>
-
-</footer>
+    </footer>
+</div>
 </body>
 </html>
