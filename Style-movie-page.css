@@ -1,0 +1,49 @@
+/*FIlm pages additions*/
+video, iframe{
+    width:90%;
+    height: auto;
+    display: block;
+    border: .1em solid black;
+    background-color: black;
+    margin: 1em auto;
+
+}
+iframe{
+    padding:2em;
+}
+table{
+    width: 95%;
+    margin: 1em;
+    border: .2em solid transparent;
+    text-align: center;
+}
+th{
+    background-color: #f60;
+    color:white;
+}
+tr{
+    background-color:#fbdecf
+}
+
+.trailer{
+    color:#ff6600;
+    background-color: #f2f2f2;
+    font-weight: normal;
+    margin: 1em 2em;
+    padding: .1em 0em;
+}
+section form{
+    background-color: #e6e6e6;
+    margin:0 1em 1em 1em;
+    padding: .5em;
+}
+#name-surname, #mailbox, textarea{
+    width:100%;
+}
+textarea{
+    resize: none;
+}
+label span{
+    color: #ff6600;
+    font-weight: bold;
+}
