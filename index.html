@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Кино.бай</title>
-    <base href="https://Yakimco.github.io/index.html">
-    <link rel="Stylesheet" href="Styling.css">
+    <base href="file:///C:/Users/Yakim/Documents/GitHub/Yakimco.github.io/index.html">
     <link rel="Stylesheet" href="libs/css/font-awesome.min.css">
+    <link rel="Stylesheet" href="Styling.css">
+
 </head>
 <body>
 <header>
     <div class="header-kino">
-        <h1>Кино.бай</h1>
+        <div class="filter">
+            <h1>Кино.бай</h1>
+        </div>
+        <svg>
+            <defs>
+                <filter id="f">
+                    <feGaussianBlur stdDeviation="2" />
+                </filter>
+            </defs>
+        </svg>
         <form action="https://google.by" method="get" role="search">
             <input type="search" placeholder="Поиск" name="finder"/>
             <button type="submit" value="Искать" id="search"><span class="fa fa-search" aria-hidden="true"></span>
@@ -37,8 +47,9 @@
 
         <main>
             <article>
-                <div class="article-header">
-                    <header>
+                <div class="article-header filter">
+
+                        <header>
                         <h1>
                             <mark>Властелин колец</mark>
                             <a href="film_page1.html">Возвращение короля</a>
@@ -82,7 +93,7 @@
                 <br/>
             </article>
             <article>
-                <div class="article-header">
+                <div class="article-header filter">
                     <header>
                         <h1>
                             <mark>Властелин колец</mark>
@@ -131,7 +142,7 @@
             </article>
 
             <article>
-                <div class="article-header">
+                <div class="article-header filter">
                     <header>
                         <h1>
                             <mark>Властелин колец</mark>
