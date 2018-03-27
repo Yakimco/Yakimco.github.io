@@ -1,54 +1,58 @@
- /*body style*/
+
+/*body style*/
     body {
-        font-size: .8em;
+        font-size: .7em;
         font-family: Tahoma;
         color: #333;
-        background: url("images/back.jpg") no-repeat;
         background-color: #d5d5d5;
-        width: 70%;
-        margin: 2em auto;
-        min-width: 720px;
+        width: 98%;
+        margin: .5em auto;
+        max-width: 720px;
 
     }
 
     /*header*/
     .header-kino {
+        width: auto;
         background-color: #585858;
         padding: 1em;
         border-top-left-radius: 0.5em;
         border-top-right-radius: 0.5em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+
     }
 
     .header-kino h1 {
-        font-size: 2em;
+        text-align: center;
+        font-size: 2.5em;
         color: #ffffff;
+        margin: .5em 0;
     }
 
     .filter {
+        height: 4em;
         position: inherit;
         visibility: visible;
         overflow: hidden;
         background: inherit;
     }
 
-    .filter:hover {
+    .filter:active {
         content: " ";
         visibility: visible;
         position: static;
         background: inherit;
-
         filter: url("#f")
     }
 
     /*search size*/
     /*????????????*/
     input[type=search] {
+        width: 30%;
+        margin-left: 35%;
         font-size: 1em;
-        padding: .5em;
+        padding: 1em;
         border: none;
+        float: left;
     }
 
     form button {
@@ -56,8 +60,7 @@
         cursor: pointer;
         border: none;
         background: #ddd;
-        padding: .5em 1em;
-        float: right;
+        padding: 1em 1em;
     }
 
     /*navigation-menu*/
@@ -67,42 +70,26 @@
     }
 
     nav li {
-        font-size: 1em;
-        display: inline-flex;
+        text-align: center;
+        font-size: 1.2em;
         margin: 0 3em;
         text-decoration: none;
         list-style-type: none;
         color: rgba(255, 255, 255, 0.5);
-        justify-items: center;
-        justify-content: space-around;
-    }
-
-    li a:hover {
-        color: white;
-        background: #636363;
-
     }
 
     /*content*/
-    .columns {
-        display: inline-flex;
-        justify-content: space-between;
-    }
-
     .search-result {
         background-color: #ffffff;
         margin-top: 1em;
         margin-bottom: 1em;
         box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
-        flex: 3;
     }
 
     .aside-info {
-        flex-wrap: wrap;
         background: #ffffff;
         box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
-        margin: 1em 0 1em 1em;
-        flex: 1;
+        margin: 1em 0;
     }
 
     .search-result-lord {
@@ -123,17 +110,14 @@
         color: #ff6600;
     }
 
-    /*movie description flex*/
-    .flex-kino {
-        display: flex;
-    }
-
     img {
-        width: 20em;
+        width: 90%;
+        text-align: center;
     }
 
     figcaption, main aside {
         text-align: center;
+        align-self: center;
     }
 
     article h1, aside h1 {
@@ -166,18 +150,7 @@
         display: inline-block;
     }
 
-    /*Small yellow rotated Packman 3 lines */
-    span a:before {
-        content: "";
-        width: 0;
-        height: 0;
-        display: inline-block;
-        border: .3em solid currentColor;
-        border-left: .3em solid transparent;
-        border-radius: .3em;
-    }
-
-    a:hover {
+    a:active {
         color: #d2ff40;
     }
 
@@ -215,7 +188,7 @@
         border-color: rgba(100, 100, 100, .5) transparent transparent transparent;
     }
 
-    .tooltip:hover .IMDb {
+    .tooltip:active, .IMDb {
         visibility: visible;
         opacity: 1;
     }
