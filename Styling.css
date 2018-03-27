@@ -1,211 +1,221 @@
-/*body style*/
-body {
-    font-size: .8em;
-    font-family: Tahoma;
-    color: #333;
-    background: url("images/back.jpg") no-repeat;
-    background-color: #d5d5d5;
-    width: 70%;
-    margin: 2em auto;
-    min-width: 720px;
+ /*body style*/
+    body {
+        font-size: .8em;
+        font-family: Tahoma;
+        color: #333;
+        background: url("images/back.jpg") no-repeat;
+        background-color: #d5d5d5;
+        width: 70%;
+        margin: 2em auto;
+        min-width: 720px;
 
-}
+    }
 
-/*header*/
-.header-kino {
-    width: auto;
-    background-color: #585858;
-    padding: 1em;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+    /*header*/
+    .header-kino {
+        background-color: #585858;
+        padding: 1em;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-}
+    .header-kino h1 {
+        font-size: 2em;
+        color: #ffffff;
+    }
 
-.header-kino h1 {
-    font-size: 2em;
-    color: #ffffff;
-}
-.filter {
-    position: inherit;
-    visibility: visible;
-    overflow: hidden;
-    background: inherit;
-}
-.filter:hover {
-    content: " ";
-    visibility: visible;
-    position: static;
-    background: inherit;
+    .filter {
+        position: inherit;
+        visibility: visible;
+        overflow: hidden;
+        background: inherit;
+    }
 
-    filter: url("#f")
-}
-/*search size*/
-/*????????????*/
-input[type=search] {
-    font-size: 1em;
-    padding: .5em;
-    border: none;
-}
+    .filter:hover {
+        content: " ";
+        visibility: visible;
+        position: static;
+        background: inherit;
 
-form button{
-    font-size: 1em;
-    cursor: pointer;
-    border: none;
-    background: #ddd;
-    padding: .5em 1em;
-    float: right;
-}
+        filter: url("#f")
+    }
 
-/*navigation-menu*/
-nav {
-    border: .01em solid transparent;
-    background-color: #525252;
-}
+    /*search size*/
+    /*????????????*/
+    input[type=search] {
+        font-size: 1em;
+        padding: .5em;
+        border: none;
+    }
 
-nav li {
-    font-size: 1em;
-    display:inline-flex;
-    margin: 0 3em;
-    text-decoration: none;
-    list-style-type: none;
-    color: rgba(255,255,255,0.5);
-    justify-items: center;
-    justify-content: space-around;
-}
-li a:hover {
+    form button {
+        font-size: 1em;
+        cursor: pointer;
+        border: none;
+        background: #ddd;
+        padding: .5em 1em;
+        float: right;
+    }
+
+    /*navigation-menu*/
+    nav {
+        border: .01em solid transparent;
+        background-color: #525252;
+    }
+
+    nav li {
+        font-size: 1em;
+        display: inline-flex;
+        margin: 0 3em;
+        text-decoration: none;
+        list-style-type: none;
+        color: rgba(255, 255, 255, 0.5);
+        justify-items: center;
+        justify-content: space-around;
+    }
+
+    li a:hover {
         color: white;
         background: #636363;
 
-}
-/*content*/
+    }
 
-.columns{
-    display:inline-flex;
-    justify-content:space-between;
-}
+    /*content*/
+    .columns {
+        display: inline-flex;
+        justify-content: space-between;
+    }
 
-.search-result {
-    background-color: #ffffff;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
-    flex:3;
-}
-.aside-info {
-    flex-wrap: wrap;
-    background: #ffffff;
-    box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
-    margin:1em 0 1em 1em;
-    flex:1;
-}
+    .search-result {
+        background-color: #ffffff;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
+        flex: 3;
+    }
 
-.search-result-lord {
-    border-bottom: 1px solid #000;
-    padding: 1em;
-    margin-bottom: .5em;
-}
+    .aside-info {
+        flex-wrap: wrap;
+        background: #ffffff;
+        box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
+        margin: 1em 0 1em 1em;
+        flex: 1;
+    }
 
-.search-result-lord span {
-    color: #ff6600;
-    font-weight: bold;
-}
+    .search-result-lord {
+        border-bottom: 1px solid #000;
+        padding: 1em;
+        margin-bottom: .5em;
+    }
 
-.article-header {
-    border-left: .5em solid #ff6600;
-    padding: .5em;
-    background: linear-gradient(#f2f2f2, #e1e1e1);
-    color:#ff6600;
-}
+    .search-result-lord span {
+        color: #ff6600;
+        font-weight: bold;
+    }
 
-/*movie description flex*/
-.flex-kino {
-    display: flex;
-}
-img {
-    width: 20em;
-}
-figcaption, main aside{
-    text-align: center;
-}
-article h1, aside h1{
-    font-size: 1.3em;
-    font-weight: normal;
-}
+    .article-header {
+        border-left: .5em solid #ff6600;
+        padding: .5em;
+        background: linear-gradient(#f2f2f2, #e1e1e1);
+        color: #ff6600;
+    }
 
-aside p, aside h1, main p, main h1{
-    padding:0 1em;
-}
-/*footer*/
-.footer-container {
-    background-color: #585858;
-    padding: .5em;
-    border: .1em solid transparent;
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-    color: #fff;
-}
-/*small triangle*/
-span a:after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-bottom: .8em solid currentColor;
-    border-left: .4em solid transparent;
-    border-right: .4em solid transparent;
-    display: inline-block;
-}
-/*Small yellow rotated Packman 3 lines */
-span a:before{
-    content: "";
-    width: 0;
-    height: 0;
-    display: inline-block;
-    border:.3em solid currentColor;
-    border-left: .3em solid transparent;
-    border-radius: .3em;
-}
+    /*movie description flex*/
+    .flex-kino {
+        display: flex;
+    }
 
-a:hover {
-    color:#d2ff40;
-}
+    img {
+        width: 20em;
+    }
 
-a, mark {
-    color: inherit;
-    text-decoration: none;
-    background: transparent;
-}
+    figcaption, main aside {
+        text-align: center;
+    }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: .1em dashed #ff6600;
-}
-.tooltip .IMDb {
-    visibility: hidden;
-    width: 11em;
-    background-color: rgba(100, 100, 100, .5);
-    color: #010000;
-    padding: .1em;
-    position: absolute;
-    bottom: 1.3em;
-    right: -3em;
-    opacity: 0;
-    font-weight: normal;
-}
+    article h1, aside h1 {
+        font-size: 1.3em;
+        font-weight: normal;
+    }
 
-.IMDb:after {
-    content: "";
-    position: absolute;
-    top: 1.3em;
-    left: 5.5em;
-    border: .5em solid;
-    border-color: rgba(100, 100, 100, .5) transparent transparent transparent;
-}
+    aside p, aside h1, main p, main h1 {
+        padding: 0 1em;
+    }
 
-.tooltip:hover .IMDb {
-    visibility: visible;
-    opacity: 1;
-}
+    /*footer*/
+    .footer-container {
+        background-color: #585858;
+        padding: .5em;
+        border: .1em solid transparent;
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        color: #fff;
+    }
+
+    /*small triangle*/
+    span a:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: .8em solid currentColor;
+        border-left: .4em solid transparent;
+        border-right: .4em solid transparent;
+        display: inline-block;
+    }
+
+    /*Small yellow rotated Packman 3 lines */
+    span a:before {
+        content: "";
+        width: 0;
+        height: 0;
+        display: inline-block;
+        border: .3em solid currentColor;
+        border-left: .3em solid transparent;
+        border-radius: .3em;
+    }
+
+    a:hover {
+        color: #d2ff40;
+    }
+
+    a, mark {
+        color: inherit;
+        text-decoration: none;
+        background: transparent;
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: .1em dashed #ff6600;
+    }
+
+    .tooltip .IMDb {
+        visibility: hidden;
+        width: 11em;
+        background-color: rgba(100, 100, 100, .5);
+        color: #010000;
+        padding: .1em;
+        position: absolute;
+        bottom: 1.3em;
+        right: -3em;
+        opacity: 0;
+        font-weight: normal;
+    }
+
+    .IMDb:after {
+        content: "";
+        position: absolute;
+        top: 1.3em;
+        left: 5.5em;
+        border: .5em solid;
+        border-color: rgba(100, 100, 100, .5) transparent transparent transparent;
+    }
+
+    .tooltip:hover .IMDb {
+        visibility: visible;
+        opacity: 1;
+    }
