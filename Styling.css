@@ -1,221 +1,259 @@
- /*body style*/
-    body {
-        font-size: .8em;
-        font-family: Tahoma;
-        color: #333;
-        background: url("images/back.jpg") no-repeat;
-        background-color: #d5d5d5;
-        width: 70%;
-        margin: 2em auto;
-        min-width: 720px;
+/*body style*/
+body {
+    font-size: .8em;
+    font-family: Tahoma;
+    color: #333;
+    background: url("images/back.jpg") no-repeat;
+    background-color: #d5d5d5;
+    width: 70%;
+    margin: 2em auto;
+    min-width: 720px;
 
+}
+
+/*header*/
+.header-kino {
+    background-color: #585858;
+    padding: 1em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-kino h1 {
+    font-size: 2em;
+    color: #ffffff;
+
+}
+
+.filter {
+    position: inherit;
+    visibility: visible;
+    overflow: hidden;
+    background: inherit;
+}
+
+.filter:hover {
+    content: " ";
+    visibility: visible;
+    position: static;
+    background: inherit;
+
+    filter: url("#f")
+}
+
+/*search size*/
+/*????????????*/
+input[type=search] {
+    font-size: 1em;
+    padding: .5em;
+    border: none;
+}
+
+
+form button {
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background: #ddd;
+    padding: .5em 1em;
+    float: right;
+}
+/*navigation-menu*/
+nav {
+    border: .01em solid transparent;
+    background-color: #525252;
+}
+
+nav li {
+    font-size: 1em;
+    display: inline-flex;
+    margin: 0 3em;
+    text-decoration: none;
+    list-style-type: none;
+    color: rgba(255, 255, 255, 0.5);
+    justify-items: center;
+    justify-content: space-around;
+}
+
+li a:hover {
+    color: white;
+    background: #636363;
+
+}
+
+/*content*/
+.columns {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.search-result {
+    background-color: #ffffff;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
+    flex: 3;
+}
+
+.aside-info {
+    flex-wrap: wrap;
+    background: #ffffff;
+    box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
+    margin: 1em 0 1em 1em;
+    flex: 1;
+}
+
+.search-result-lord {
+    border-bottom: 1px solid #000;
+    padding: 1em;
+    margin-bottom: .5em;
+}
+
+.search-result-lord span {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.article-header {
+    border-left: .5em solid #ff6600;
+    padding: .5em;
+    background: linear-gradient(#f2f2f2, #e1e1e1);
+    color: #ff6600;
+}
+
+/*movie description flex*/
+.flex-kino {
+    display: flex;
+}
+
+.animate:hover {
+    cursor: zoom-in;
+    animation: star 10s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes star {
+    0% {
+        transform: rotatex(-180deg);
+        transform-origin: center;
     }
-
-    /*header*/
-    .header-kino {
-        background-color: #585858;
-        padding: 1em;
-        border-top-left-radius: 0.5em;
-        border-top-right-radius: 0.5em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    10% {
+        transform: rotateY(30deg) rotateX(30deg) rotateZ(30deg);
     }
-
-    .header-kino h1 {
-        font-size: 2em;
-        color: #ffffff;
+    20% {
+        transform: rotateY(60deg) rotateX(60deg) rotateZ(60deg);
     }
-
-    .filter {
-        position: inherit;
-        visibility: visible;
-        overflow: hidden;
-        background: inherit;
+    30% {
+        transform: rotateY(90deg) rotateX(90deg) rotateZ(90deg);
     }
-
-    .filter:hover {
-        content: " ";
-        visibility: visible;
-        position: static;
-        background: inherit;
-
-        filter: url("#f")
+    40% {
+        transform: rotateY(180deg) rotateX(180deg) rotateZ(180deg);
     }
-
-    /*search size*/
-    /*????????????*/
-    input[type=search] {
-        font-size: 1em;
-        padding: .5em;
-        border: none;
+    50% {
+        transform: rotateY(270deg) rotateX(270deg) rotateZ(270deg);
     }
-
-    form button {
-        font-size: 1em;
-        cursor: pointer;
-        border: none;
-        background: #ddd;
-        padding: .5em 1em;
-        float: right;
+    60% {
+        transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
     }
-
-    /*navigation-menu*/
-    nav {
-        border: .01em solid transparent;
-        background-color: #525252;
+    70% {
+        transform: scale(1);
     }
-
-    nav li {
-        font-size: 1em;
-        display: inline-flex;
-        margin: 0 3em;
-        text-decoration: none;
-        list-style-type: none;
-        color: rgba(255, 255, 255, 0.5);
-        justify-items: center;
-        justify-content: space-around;
+    80% {
+        transform: skew(7deg, 15deg) scale(0.9);
     }
-
-    li a:hover {
-        color: white;
-        background: #636363;
-
+    100% {
+        transform: skewY(15deg) scale(0.8)
     }
+}
 
-    /*content*/
-    .columns {
-        display: inline-flex;
-        justify-content: space-between;
-    }
+figcaption, main aside {
+    text-align: center;
+}
 
-    .search-result {
-        background-color: #ffffff;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
-        flex: 3;
-    }
+article h1, aside h1 {
+    font-size: 1.3em;
+    font-weight: normal;
+}
 
-    .aside-info {
-        flex-wrap: wrap;
-        background: #ffffff;
-        box-shadow: 0.3em .5em 1em rgba(0, 0, 0, 0.5);
-        margin: 1em 0 1em 1em;
-        flex: 1;
-    }
+aside p, aside h1, main p, main h1 {
+    padding: 0 1em;
+}
 
-    .search-result-lord {
-        border-bottom: 1px solid #000;
-        padding: 1em;
-        margin-bottom: .5em;
-    }
+/*footer*/
+.footer-container {
+    background-color: #585858;
+    padding: .5em;
+    border: .1em solid transparent;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    color: #fff;
+}
 
-    .search-result-lord span {
-        color: #ff6600;
-        font-weight: bold;
-    }
+/*small triangle*/
+span a:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: .8em solid currentColor;
+    border-left: .4em solid transparent;
+    border-right: .4em solid transparent;
+    display: inline-block;
+}
 
-    .article-header {
-        border-left: .5em solid #ff6600;
-        padding: .5em;
-        background: linear-gradient(#f2f2f2, #e1e1e1);
-        color: #ff6600;
-    }
+/*Small yellow rotated Packman 3 lines */
+span a:before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: .3em solid currentColor;
+    border-left: .3em solid transparent;
+    border-radius: .3em;
+}
 
-    /*movie description flex*/
-    .flex-kino {
-        display: flex;
-    }
+a:hover {
+    color: #d2ff40;
+}
 
-    img {
-        width: 20em;
-    }
+a, mark {
+    color: inherit;
+    text-decoration: none;
+    background: transparent;
+}
 
-    figcaption, main aside {
-        text-align: center;
-    }
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: .1em dashed #ff6600;
+}
 
-    article h1, aside h1 {
-        font-size: 1.3em;
-        font-weight: normal;
-    }
+.tooltip .IMDb {
+    visibility: hidden;
+    width: 11em;
+    background-color: rgba(100, 100, 100, .5);
+    color: #010000;
+    padding: .1em;
+    position: absolute;
+    bottom: 1.3em;
+    right: -3em;
+    opacity: 0;
+    font-weight: normal;
+}
 
-    aside p, aside h1, main p, main h1 {
-        padding: 0 1em;
-    }
+.IMDb:after {
+    content: "";
+    position: absolute;
+    top: 1.3em;
+    left: 5.5em;
+    border: .5em solid;
+    border-color: rgba(100, 100, 100, .5) transparent transparent transparent;
+}
 
-    /*footer*/
-    .footer-container {
-        background-color: #585858;
-        padding: .5em;
-        border: .1em solid transparent;
-        border-bottom-left-radius: 0.5em;
-        border-bottom-right-radius: 0.5em;
-        color: #fff;
-    }
-
-    /*small triangle*/
-    span a:after {
-        content: "";
-        width: 0;
-        height: 0;
-        border-bottom: .8em solid currentColor;
-        border-left: .4em solid transparent;
-        border-right: .4em solid transparent;
-        display: inline-block;
-    }
-
-    /*Small yellow rotated Packman 3 lines */
-    span a:before {
-        content: "";
-        width: 0;
-        height: 0;
-        display: inline-block;
-        border: .3em solid currentColor;
-        border-left: .3em solid transparent;
-        border-radius: .3em;
-    }
-
-    a:hover {
-        color: #d2ff40;
-    }
-
-    a, mark {
-        color: inherit;
-        text-decoration: none;
-        background: transparent;
-    }
-
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        border-bottom: .1em dashed #ff6600;
-    }
-
-    .tooltip .IMDb {
-        visibility: hidden;
-        width: 11em;
-        background-color: rgba(100, 100, 100, .5);
-        color: #010000;
-        padding: .1em;
-        position: absolute;
-        bottom: 1.3em;
-        right: -3em;
-        opacity: 0;
-        font-weight: normal;
-    }
-
-    .IMDb:after {
-        content: "";
-        position: absolute;
-        top: 1.3em;
-        left: 5.5em;
-        border: .5em solid;
-        border-color: rgba(100, 100, 100, .5) transparent transparent transparent;
-    }
-
-    .tooltip:hover .IMDb {
-        visibility: visible;
-        opacity: 1;
-    }
+.tooltip:hover .IMDb {
+    visibility: visible;
+    opacity: 1;
+}
