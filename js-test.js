@@ -1,33 +1,37 @@
 'use strict';
-var answer;
-do{
-    answer = parseInt(prompt('1+1=?'));
-    if(answer != 2){
-        var b = confirm('wrong answer. try again');
-        if (b == false){
-            break;
-        }
-    }
+function Animal(name){
+    this.name = name;
 
-}
-while (answer !=2);
-if (answer == 2) {
-    var first_right_answer = confirm('you are right next question?');
-    if (first_right_answer == true) {
-        var factorial_num = Math.floor(Math.random() * 20 + 1);
-        var factorial_question = parseInt(prompt('f(' + factorial_num + ')=?'));
+};
 
-        function factorial(n) {
-            return (n != 1) ? n * factorial(n - 1) : 1;
-        }
+Animal.prototype.eat = function (food) {
+    console.log (this.name + ' eat ' + food );
+};
+Animal.prototype.sleep = function () {
+    console.log('sleeping');
+};
 
-        if (factorial(factorial_num) === factorial_question) {
-            alert('You are awesome');
-        }
-        else {
-            alert('You are wrong.');
-        }
+var animal = new Animal();
 
-    }
+function Lion() {
 
-}
+};
+
+Lion.prototype = Object.create(Animal.prototype);
+Lion.prototype.run = function () {
+    console.log(this.name + ' running')
+};
+
+var lion = new Lion();
+
+function Rabbit() {
+
+};
+
+Rabbit.prototype = Object.create(Animal.prototype);
+
+Rabbit.prototype.jump = function () {
+    console.log(this.name + ' jumping');
+};
+
+var rabbit = new Rabbit();
