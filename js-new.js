@@ -108,22 +108,22 @@ window.onload = function () {
 
     };
 
-    function createDescription() {
-        // var div = document.createElement('div');
-        // div.className = 'flex-kino';
-        // detailsElement.innerHTML = '<div class="figure"><figure>' +
-        //     '<img class="animate" src=header.url>' +
-        //     '<figcaption>Обложка фильма</figcaption></figure></div>' +
-        //     '<div class="movie-description"><section><h1>Описание</h1><p>' + s.details.description + '</p>' +
-        //
-        //     '<h1>Актеры</h1><p>' + details.actors + '</p></section></div>'
-        // return detailsElement;
+    function createDescription(details) {
+        var div = document.createElement('div');
+        div.className = 'flex-kino';
+        detailsElement.innerHTML = '<div class="figure"><figure>' +
+            '<img class="animate" src=header.url>' +
+            '<figcaption>Обложка фильма</figcaption></figure></div>' +
+            '<div class="movie-description"><section><h1>Описание</h1><p>' + s.details.description + '</p>' +
+
+            '<h1>Актеры</h1><p>' + details.actors + '</p></section></div>'
+        return detailsElement;
     };
 
-    function createAside(film) {
-        var aside = document.createElement('aside');
-        article.appendChild(aside);
-        aside.innerHTML ='<p>\n' +
+    function createAside(aside) {
+        var asider = document.createElement('aside');
+        article.appendChild(asider);
+        aside.innerHTML = '<p>\n' +
             '                        <strong>Год </strong> 2003,\n' +
             '                        <strong> Оценка <span class="tooltip"> IMDb:<span class="IMDb">Internet Movie Database</span></span> 8,9 </strong>\n' +
             '                        <small>(1 349 172 )</small>\n' +
@@ -131,7 +131,7 @@ window.onload = function () {
             '                        <strong> Бюджет:</strong> ' +
             '                        <strong> Страна: </strong>' + aside.country +
             '                    </p>'
-        
+
     };
 
     function createArticle(film) {
@@ -143,10 +143,12 @@ window.onload = function () {
         return article;
     };
 
+    document.addEventListener('DOMContentLoaded', function () {
+        for (var i = 0; i < s.length; i++) {
+            console.log(s[i]);
+            document.querySelector('main').appendChild(createArticle(s[i]));
+        }
 
-    for (var i = 0; i < s.length; i++) {
-        console.log(s[i]);
-        document.querySelector('main').appendChild(createArticle(s[i]));
-    };
+    }
 
-}
+    }
