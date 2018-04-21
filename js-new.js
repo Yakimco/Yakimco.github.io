@@ -1,5 +1,4 @@
 window.onload = function () {
-
     var s = [
         {
             header: {
@@ -20,9 +19,9 @@ window.onload = function () {
                 country: 'США',
                 imbd: 8.90,
                 year: 2003,
-                money: "$94 000 000"
+                money: '$'+94000000
             },
-        },
+        }
         {
             header: {
                 title: 'Властелин колец:Две крепости.',
@@ -42,9 +41,9 @@ window.onload = function () {
                 country: 'США',
                 imbd: 8.70,
                 year: 2002,
-                money: "$94 000 000"
+                money: '$' + 94000000
             },
-        },
+        }
 
         {
             header: {
@@ -68,6 +67,7 @@ window.onload = function () {
                 money: "$94 000 000"
             },
         },
+
         {
             header: {
                 title: 'Властелин колец:Братство кольца.',
@@ -86,9 +86,9 @@ window.onload = function () {
                 country: 'США',
                 imbd: 8.80,
                 year: 2001,
-                money: "$93 000 000"
+                money: '$'+93000000
             },
-        },
+        }
 
     ];
 
@@ -114,7 +114,7 @@ window.onload = function () {
         detailsElement.innerHTML = '<div class="figure"><figure>' +
             '<img class="animate" src=header.url>' +
             '<figcaption>Обложка фильма</figcaption></figure></div>' +
-            '<div class="movie-description"><section><h1>Описание</h1><p>' + s.details.description + '</p>' +
+            '<div class="movie-description"><section><h1>Описание</h1><p>' + details.description + '</p>' +
 
             '<h1>Актеры</h1><p>' + details.actors + '</p></section></div>'
         return detailsElement;
@@ -123,15 +123,8 @@ window.onload = function () {
     function createAside(aside) {
         var asider = document.createElement('aside');
         article.appendChild(asider);
-        aside.innerHTML = '<p>\n' +
-            '                        <strong>Год </strong> 2003,\n' +
-            '                        <strong> Оценка <span class="tooltip"> IMDb:<span class="IMDb">Internet Movie Database</span></span> 8,9 </strong>\n' +
-            '                        <small>(1 349 172 )</small>\n' +
-            '                        ,\n' +
-            '                        <strong> Бюджет:</strong> ' +
-            '                        <strong> Страна: </strong>' + aside.country +
-            '                    </p>'
-
+        aside.innerHTML = '<p><strong>Год </strong> 2003<strong> Оценка <span class="tooltip"> IMDb:<span class="IMDb">Internet Movie Database</span></span> 8,9 </strong>\n' +
+            ' <small>(1 349 172 )</small><strong> Бюджет:</strong> ' +aside.money + '<strong> Страна: </strong>' + aside.country + '</p>'
     };
 
     function createArticle(film) {
@@ -143,12 +136,10 @@ window.onload = function () {
         return article;
     };
 
-    document.addEventListener('DOMContentLoaded', function () {
+
         for (var i = 0; i < s.length; i++) {
             console.log(s[i]);
             document.querySelector('main').appendChild(createArticle(s[i]));
         }
+}
 
-    }
-
-    }
