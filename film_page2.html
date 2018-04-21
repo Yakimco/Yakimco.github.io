@@ -10,8 +10,64 @@
     <link rel="stylesheet" href="Style-movie-page.css">
     <link rel="stylesheet" media="screen and (min-width:701px)" href="Styling.css" />
 
+    <script>
 
-</head>
+        window.onload = function () {
+            var a = document.getElementById("button1");
+            a.onclick = function () {
+
+                var nameField = document.getElementById("name-surname").value;
+                var mailToUser = document.getElementById("mailbox").value;
+                var userComment = document.getElementById("comment").value;
+
+                var userName = document.createElement('div');
+                userName.className = "comment";
+                var mailToUserLink = document.createElement('a');
+                mailToUserLink.setAttribute("href", "mailto:" + mailToUser);
+                mailToUserLink.textContent = nameField;
+                userName.appendChild(mailToUserLink);
+                //button
+                 var btn = document.createElement('input');
+                 btn.setAttribute("type", "button");
+                 btn.setAttribute("disabled", "disabled");
+                 btn.setAttribute("value","редактировать");
+                 userName.appendChild(btn);
+
+
+                var btn1 = document.createElement('input');
+                btn.setAttribute("type", "button");
+                btn.setAttribute("value","удалить");
+                userName.appendChild(btn1);
+
+
+
+
+                //comment section
+
+                var commentText = document.createElement('p');
+                commentText.innerHTML = userComment;
+                userName.appendChild(commentText);
+
+
+                var forma = document.getElementById("form");
+                var ins = document.getElementById("inserted");
+                console.log(forma);
+
+                forma.insertBefore(userName, ins);
+
+                btn1.onclick = function () {
+                   var yes =  confirm('Are you sure?');
+                   if (yes == true){
+                       userName.innerHTML = "";
+                   }
+                }
+
+            };
+
+        }
+
+    </script>
+
 <body>
 <header>
 
@@ -102,14 +158,14 @@
             </footer>
             <section>
                 <br/>
-                <form action="https://yakimco.github.io" method="post">
-                    <label for="name-surname">Имя<span>*</span></label>
+                <form action="https://yakimco.github.io" method="post" id="form">
+                    <label for="name-surname" id="inserted" >Имя<span>*</span></label>
                     <input type="text" name="surname" id="name-surname" required/><br/>
                     <label for="mailbox">Почта<span>*</span><input type="email" id="mailbox" name="mail" required/></label><br/>
                     <label for="comment"> Комментарий<span>*</span></label>
                     <textarea rows="15" cols="55" id="comment" name="comment-section" required>
             </textarea><br/>
-                    <input type="submit" value="Добавить комментарий"/>
+                    <input type="button" id="button1" value="Добавить комментарий"/>
 
                 </form>
                 <br/>
