@@ -26,6 +26,21 @@
                 mailToUserLink.setAttribute("href", "mailto:" + mailToUser);
                 mailToUserLink.textContent = nameField;
                 userName.appendChild(mailToUserLink);
+                //button
+                 var btn = document.createElement('input');
+                 btn.setAttribute("type", "button");
+                 btn.setAttribute("disabled", "disabled");
+                 btn.setAttribute("value","редактировать");
+                 userName.appendChild(btn);
+
+
+                var btn1 = document.createElement('input');
+                btn.setAttribute("type", "button");
+                btn.setAttribute("value","удалить");
+                userName.appendChild(btn1);
+
+
+
 
                 //comment section
 
@@ -39,6 +54,13 @@
                 console.log(forma);
 
                 forma.insertBefore(userName, ins);
+
+                btn1.onclick = function () {
+                   var yes =  confirm('Are you sure?');
+                   if (yes == true){
+                       userName.innerHTML = "";
+                   }
+                }
 
             };
 
