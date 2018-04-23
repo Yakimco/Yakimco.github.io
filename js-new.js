@@ -1,20 +1,21 @@
 'use strict';
 
-var JSONrequest = new XMLHttpRequest();
-JSONrequest.open("POST", "movie-data.json", true);
-JSONrequest.onreadystatechange = function () {
-    if (JSONrequest.readyState ==4 ){
-        if(JSONrequest.status==200){
-            var searchResult = JSONrequest.responseText;
-            console.log("successssssss")
-            return searchResult;
+var request = new XMLHttpRequest();
+request.open("GET", '/movie-data.json', true);
+request.onreadystatechange = function () {
+    if (request.readyState ==4 ){
+        if(request.status==200){
+            console.log('successssssss')
         }
         else {
-            console.log(JSONrequest.status, "what");
+            console.log(request.status, 'what');
         }
     }
-}
-JSONrequest.send(null);
+};
+
+request.send(null);
+
+var searchResults = request.responseText;
 
 
 function createArticle(film) {
