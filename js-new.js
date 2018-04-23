@@ -1,75 +1,22 @@
 'use strict';
 
-var searchResults = [
-    {
-        header: {
-            title: 'Властелин колец: Возвращение Короля',
-            url: 'film_page1.html'
-        },
-
-        details: {
-            poster: 'images/img1.jpg',
-            description: 'Последняя часть трилогии о Кольце Всевластия и о героях, взявших на себя бремя спасения Средиземья. Повелитель сил Тьмы Саурон направляет свои бесчисленные рати под стены Минас-Тирита, крепости Последней Надежды.',
-            actors: 'Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл'
-        },
-
-        aside: {
-            time: '2003',
-            imdb: {
-                number: '8.90',
-                add: '1 349 172'
-            },
-            money: '$94 000 000',
-            country: 'США'
+var request = new XMLHttpRequest();
+request.open("GET", '/movie-data.json', true);
+request.onreadystatechange = function () {
+    if (request.readyState ==4 ){
+        if(request.status==200){
+            console.log('successssssss')
         }
-    },
-
-    {
-        header: {
-            title: 'Властелин колец: Две крепости',
-            url: 'film_page2.html'
-        },
-
-        details: {
-            poster: 'images/img3.jpg',
-            description: 'Братство распалось, но Кольцо Всевластья должно быть уничтожено. Фродо и Сэм вынуждены доверить свои жизни Голлуму, который взялся провести их к вратам Мордора. Громадная Армия Сарумана приближается: члены братства и их союзники готовы принять бой.',
-            actors: 'Элайджа Вуд, Шон Эстин, Орландо Блум, Вигго Мортенсен, Иэн МакКеллен, Доминик Монахэн, Миранда Отто, Джон Рис-Дэвис, Энди Серкис, Билли Бойд'
-        },
-
-        aside: {
-            time: '2002',
-            imdb: {
-                number: '8.70',
-                add: '1 221 214'
-            },
-            money: '$94 000 000',
-            country: 'США'
-        }
-    },
-
-    {
-        header: {
-            title: 'Властелин колец: Братство кольца',
-            url: 'film_page3.html'
-        },
-
-        details: {
-            poster: 'images/img1.jpg',
-            description: 'Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет. Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.',
-            actors: 'Элайджа Вуд, Иэн МакКеллен, Вигго Мортенсен, Шон Бин, Орландо Блум, Джон Рис-Дэвис, Иэн Холм, Шон Эстин, Билли Бойд, Доминик Монахэн'
-        },
-
-        aside: {
-            time: '2001',
-            imdb: {
-                number: '8.80',
-                add: '1 389 831'
-            },
-            money: '$93 000 000',
-            country: 'США'
+        else {
+            console.log(request.status, 'what');
         }
     }
-];
+};
+
+request.send(null);
+
+var searchResults = request.responseText;
+
 
 function createArticle(film) {
     var article = document.createElement('article');
