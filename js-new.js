@@ -1,21 +1,24 @@
 'use strict';
 
+var searchResults;
 var request = new XMLHttpRequest();
 request.open("GET", '/movie-data.json', true);
 request.onreadystatechange = function () {
     if (request.readyState ==4 ){
         if(request.status==200){
+            searchResults = JSON.parse(request.responseText);
             console.log('successssssss')
         }
         else {
             console.log(request.status, 'what');
         }
+
     }
 };
 
 request.send(null);
 
-var searchResults = request.responseText;
+
 
 
 function createArticle(film) {
