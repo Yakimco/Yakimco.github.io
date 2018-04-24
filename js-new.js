@@ -8,15 +8,15 @@ request.onreadystatechange = function () {
         if(request.status==200){
             searchResults = JSON.parse(request.responseText);
             console.log('successssssss')
+            for (var i = 0; i < searchResults.length; i++) {
+                document.querySelector('main').appendChild(createArticle(searchResults[i]));
+            }
         }
         else {
             console.log(request.status, 'what');
         }
-
     }
 };
-
-request.send(null);
 
 
 
@@ -99,9 +99,5 @@ function createAside(aside) {
 
 
 window.onload = function () {
-
-    for (var i = 0; i < searchResults.length; i++) {
-        document.querySelector('main').appendChild(createArticle(searchResults[i]));
-    }
-
+    request.send(null);
 };
